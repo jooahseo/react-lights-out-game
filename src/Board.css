@@ -1,3 +1,7 @@
 .Board {
   margin: 0 auto;
 }
+
+.gameBoard{
+  border: 1px solid black;
+}
