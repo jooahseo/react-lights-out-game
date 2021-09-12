@@ -34,11 +34,20 @@ function Board({ nrows, ncols, chanceLightStartsOn }) {
   function createBoard() {
     let initialBoard = [];
     // TODO: create array-of-arrays of true/false values
+    for(let i=0; i<nrows; i++){
+      const row = [];
+      for(let j=0; j<ncols; j++){
+        let trueOrFalse = Math.random() < chanceLightStartsOn ? true : false;
+        row.push(trueOrFalse);
+      }
+      initialBoard.push(row);
+    }
     return initialBoard;
   }
 
   function hasWon() {
     // TODO: check the board in state to determine whether the player has won.
+    // all the board has false
   }
 
   function flipCellsAround(coord) {
