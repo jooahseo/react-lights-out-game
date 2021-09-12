@@ -96,7 +96,7 @@ function Board({ nrows = 3, ncols = 3, chanceLightStartsOn = 1.0 }) {
       <table className="gameBoard">
         <tbody>
           {board.map((row, y) => (
-            <tr>
+            <tr key={`${y}`}>
               {row.map((elem, x) => (
                 <Cell
                   key={`${y}-${x}`}
